@@ -15,7 +15,7 @@
     <td width="33%" valign="top">
       <img src="https://library.wamphlett.net/photos/blog/japan/why-japan.jpg?w=400&c=postThumb" width="100%" alt="Why Japan?" /><br />
       <a href="https://blog.warrenamphlett.co.uk/japan/why-japan"><b>Why Japan?</b></a><br />
-      Trying to answer the question I get asked most: why Japan?
+      Trying to answer the question I get asked most: why Japan? with a typo
     </td>
   </tr>
 </table>
