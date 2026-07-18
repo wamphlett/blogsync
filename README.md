@@ -52,8 +52,8 @@ descending (ties broken by `publishedAt` descending) and laid out 3 per row.
 
 ## Observability
 
-Logs, traces, and metrics all follow the same conventions as the other
-`wamphlett` services (e.g. `library`), so they show up in Grafana the same way:
+Logs, traces, and metrics follow standard OpenTelemetry conventions so they
+show up in Grafana without any extra setup:
 
 - **Logs** are structured JSON to stdout (set `LOG_FORMAT=text` for
   human-readable output locally). Every log line emitted during a run carries
