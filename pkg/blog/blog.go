@@ -32,7 +32,7 @@ type response struct {
 }
 
 // Fetch fetches and decodes the blog endpoint, returning only non-hidden
-// articles sorted by priority (descending), falling back to publishedAt
+// articles sorted by publishedAt (descending), falling back to priority
 // (descending) to break ties.
 func Fetch(ctx context.Context, tracer trace.Tracer, endpoint string) (_ []Article, err error) {
 	ctx, span := tracer.Start(ctx, "blogsync.FetchArticles")
@@ -71,10 +71,10 @@ func Fetch(ctx context.Context, tracer trace.Tracer, endpoint string) (_ []Artic
 	}
 
 	sort.SliceStable(visible, func(i, j int) bool {
-		if visible[i].Priority != visible[j].Priority {
-			return visible[i].Priority > visible[j].Priority
+		if visible[i].PublishedAt != visible[j].PublishedAt {
+			return visible[i].PublishedAt > visible[j].PublishedAt
 		}
-		return visible[i].PublishedAt > visible[j].PublishedAt
+		return visible[i].Priority > visible[j].Priority
 	})
 
 	span.SetAttributes(

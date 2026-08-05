@@ -47,8 +47,8 @@ The article JSON is expected in this shape:
 }
 ```
 
-Articles with `hidden: true` are skipped. The rest are sorted by `priority`
-descending (ties broken by `publishedAt` descending) and laid out 3 per row.
+Articles with `hidden: true` are skipped. The rest are sorted by `publishedAt`
+descending (ties broken by `priority` descending) and laid out 3 per row.
 
 ## Observability
 
